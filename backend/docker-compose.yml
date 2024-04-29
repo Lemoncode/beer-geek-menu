@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  beer-geek-menu:
+    container_name: beer-geek-menu
+    image: mongo:7
+    ports:
+      - '27017:27017'
+    volumes:
+      - type: bind
+        source: ./mongo-data
+        target: /data/db
+      - type: bind
+        source: ./backups
+        target: /backups
+    networks:
+      - beer-geek-menu-network
+volumes:
+  mongo-data:
+  backups:
+networks:
+  beer-geek-menu-network:

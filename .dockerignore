@@ -1,0 +1,10 @@
+.turbo
+backups
+dist
+mongo-data
+node_modules
+.env
+.env.example
+create-dev-env.js
+docker-compose.yml
+README.md

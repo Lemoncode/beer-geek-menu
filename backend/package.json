@@ -1,0 +1,32 @@
+{
+  "name": "@beer-geek-menu/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start:db": "docker compose up -d",
+    "prestart": "node ./create-dev-env.js",
+    "start": "nodemon --exec tsx src/index.ts",
+    "preconsole-runners": "npm run prestart",
+    "console-runners": "nodemon --no-stdin --exec tsx src/console-runners/index.ts",
+    "clean": "rimraf dist",
+    "build": "vite build",
+    "type-check": "tsc --noEmit --preserveWatchOutput",
+    "type-check:watch": "npm run type-check -- --watch",
+    "test": "vitest run -c ./config/test/config.ts",
+    "test:watch": "vitest -c ./config/test/config.ts"
+  },
+  "imports": {
+    "#common/*": "./src/common/*",
+    "#core/*": "./src/core/*",
+    "#dals/*": "./src/dals/*",
+    "#pods/*": "./src/pods/*"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
+}
