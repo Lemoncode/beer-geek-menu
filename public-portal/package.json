@@ -1,0 +1,29 @@
+{
+  "name": "@beer-geek-menu/public-portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "next dev --port 8080",
+    "clean": "rimraf dist",
+    "build": "next build",
+    "type-check": "tsc --noEmit --preserveWatchOutput",
+    "type-check:watch": "npm run type-check -- --watch",
+    "test": "vitest run -c ./config/test/config.ts",
+    "test:watch": "vitest -c ./config/test/config.ts"
+  },
+  "imports": {
+    "#*": [
+      "./src/*",
+      "./src/*.ts",
+      "./src/*.tsx",
+      "./src/*/index.ts",
+      "./src/*/index.tsx"
+    ]
+  },
+  "dependencies": {
+    "next": "^14.2.3"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "beer-geek-menu",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "public-portal",
+    "intranet",
+    "backend"
+  ],
+  "scripts": {
+    "prescripts": "npm run start:db -w @beer-geek-menu/backend",
+    "scripts": "tsx ./run-scripts",
+    "start": "npm run scripts -- start",
+    "console-runners": "npm run scripts -- console-runners",
+    "test:watch": "npm run scripts -- test:watch",
+    "build": "turbo build",
+    "test": "turbo test",
+    "prepare": "husky || echo 'noop Huksy not installed'"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown ."
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "husky": "^9.0.11",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "prompts": "^2.4.2",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.3",
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-plugin-externalize-deps": "^0.8.0",
+    "vitest": "^1.5.2"
+  }
+}
