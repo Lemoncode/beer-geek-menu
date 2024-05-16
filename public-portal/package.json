@@ -24,6 +24,7 @@
     "next": "^14.2.3"
   },
   "devDependencies": {
+    "clsx": "^2.1.1",
     "jsdom": "^24.0.0",
     "sass": "^1.77.0"
   }

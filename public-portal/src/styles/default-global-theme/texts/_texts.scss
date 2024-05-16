@@ -1,0 +1,103 @@
+@use '../mixins/mixins' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-headlines);
+  font-weight: var(--fw-bold);
+  font-optical-sizing: auto;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xxxl);
+}
+
+h2 {
+  font-size: var(--fs-xxl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+.hero-txt {
+  font-weight: var(--fw-black);
+  font-size: 3rem;
+}
+
+.txt-title {
+  font-size: var(--fs-xxl);
+  margin-block-start: 0;
+
+  &--bold {
+    @include boldText();
+  }
+
+  &--light {
+    @include lightText();
+  }
+}
+
+.txt-large {
+  font-size: var(--fs-lg);
+
+  &--bold {
+    @include boldText();
+  }
+
+  &--light {
+    @include lightText();
+  }
+}
+
+.txt-common {
+  font-size: var(--fs-md);
+
+  &--bold {
+    @include boldText();
+  }
+
+  &--light {
+    @include lightText();
+  }
+}
+
+.txt-detail {
+  font-size: var(--fs-sm);
+
+  &--bold {
+    @include boldText();
+  }
+
+  &--light {
+    @include lightText();
+  }
+}
+
+.txt--primary {
+  color: var(--color-txt-primary);
+}
+.txt--secondary {
+  color: var(--color-txt-secondary);
+}
+.txt--contrast {
+  color: var(--color-txt-contrast);
+}
+.txt--accent {
+  color: var(--color-txt-accent);
+}

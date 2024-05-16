@@ -1,0 +1,34 @@
+@mixin boldText() {
+  font-weight: var(--fw-bold);
+}
+
+@mixin lightText() {
+  font-weight: var(--fw-light);
+}
+
+@mixin button(
+  $bgcolor: var(--color-primary),
+  $textColor: var(--color-accent),
+  $border: false,
+  $padding: 1em,
+  $borderRadius: var(--master-border-radius)
+) {
+  background-color: $bgcolor;
+  font-size: var(--fs-md);
+  color: $textColor;
+  padding: 0.5em $padding 0.5em;
+  border-radius: $borderRadius;
+  font-weight: var(--fw-bold);
+  border: none;
+  transition: all ease 200ms;
+  cursor: pointer;
+  user-select: none;
+
+  @if $border {
+    border: 0.1rem solid $textColor;
+  }
+
+  &:active {
+    transform: translateY(0.2rem);
+  }
+}

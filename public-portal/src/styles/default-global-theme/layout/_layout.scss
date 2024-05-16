@@ -1,0 +1,135 @@
+@use 'sass:map';
+
+$spaces: (
+  'xs': var(--space-xs),
+  'sm': var(--space-sm),
+  'md': var(--space-md),
+  'lg': var(--space-lg),
+  'xl': var(--space-xl),
+  'xxl': var(--space-xxl),
+);
+
+/* Spacing classes */
+@each $space, $spaceVar in $spaces {
+  // margin
+  .mb-#{$space} {
+    margin-bottom: $spaceVar;
+  }
+  .mt-#{$space} {
+    margin-top: $spaceVar;
+  }
+  .my-#{$space} {
+    margin-top: $spaceVar;
+    margin-bottom: $spaceVar;
+  }
+  .mx-#{$space} {
+    margin-left: $spaceVar;
+    margin-right: $spaceVar;
+  }
+  // padding
+  .pb-#{$space} {
+    padding-bottom: $spaceVar;
+  }
+  .pt-#{$space} {
+    padding-top: $spaceVar;
+  }
+  .py-#{$space} {
+    padding-top: $spaceVar;
+    padding-bottom: $spaceVar;
+  }
+  .px-#{$space} {
+    padding-left: $spaceVar;
+    padding-right: $spaceVar;
+  }
+}
+
+/* Standard blocks and grid system for mobile devices */
+.block-mob {
+  max-width: 100%;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: space-between;
+
+  &__item {
+    flex-basis: 100%;
+    max-width: 100%;
+    flex-grow: 1;
+    padding: var(--space-sm);
+
+    &--2col {
+      flex-basis: calc((100% - (var(--space-xs))) / 2);
+      padding: var(--space-sm);
+    }
+
+    &--3col {
+      flex-basis: calc((100% - (2 * var(--space-xs))) / 3);
+      padding: var(--space-sm);
+    }
+
+    &--4col {
+      flex-basis: calc((100% - (3 * var(--space-xs))) / 4);
+      padding: var(--space-sm);
+    }
+  }
+}
+
+/* Layout for beers list */
+
+.beers-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: var(--space-lg);
+  list-style-type: none;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+
+  & > li,
+  & > .grid-item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-bg-primary-lighter);
+    padding: var(--space-md);
+    margin: 0;
+    justify-content: center;
+    gap: var(--space-sm);
+    border-radius: calc(var(--master-border-radius) * 3);
+
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.beer-img-container {
+  max-width: 100%;
+  text-align: center;
+  padding-top: var(--space-md);
+
+  img {
+    max-width: 100px;
+  }
+}
+
+.beer-name-and-price {
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
+}
+
+/* Block Colors */
+.bg-contrast {
+  color: var(--color-txt-contrast);
+  background-color: var(--color-bg-contrast);
+}
+
+.bg-primary-lighter {
+  color: var(--color-txt-primary);
+  background-color: var(--color-bg-primary-lighter);
+}
+.bg-primary-dark {
+  color: var(--color-txt-primary);
+  background-color: var(--color-bg-primary-darker);
+}
