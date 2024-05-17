@@ -33,5 +33,9 @@
     "vite": "^5.2.10",
     "vite-plugin-externalize-deps": "^0.8.0",
     "vitest": "^1.5.2"
+  },
+  "dependencies": {
+    "@fontsource-variable/oswald": "^5.0.20",
+    "@fontsource/roboto": "^5.0.13"
   }
 }

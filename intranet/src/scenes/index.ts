@@ -1,1 +1,1 @@
-export * from './temporal.scene';
+export * from './sign-up.scene';
