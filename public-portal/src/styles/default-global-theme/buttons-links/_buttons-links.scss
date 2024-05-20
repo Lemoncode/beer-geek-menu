@@ -1,0 +1,74 @@
+@use '../mixins/mixins' as *;
+
+button,
+.btn {
+  @include button();
+  &:hover {
+    background-color: var(--color-primary-lighter);
+  }
+
+  &.btn--small {
+    font-size: var(--fs-sm);
+  }
+
+  &.btn--large {
+    font-size: var(--fs-lg);
+  }
+}
+
+.btn-accent {
+  @include button(var(--color-accent), var(--color-txt-primary));
+
+  &:hover {
+    background-color: var(--color-accent-darker);
+  }
+}
+
+.btn-primary {
+  @include button(var(--color-primary), var(--color-txt-accent));
+  &:hover {
+    background-color: var(--color-primary-lighter);
+  }
+}
+
+.btn-secondary {
+  @include button(var(--color-secondary), var(--color-txt-contrast));
+  &:hover {
+    background-color: var(--color-secondary-lighter);
+  }
+}
+
+a,
+a.link--info {
+  transition: all ease 250ms;
+  color: var(--color-info);
+
+  &:hover {
+    color: var(--color-info-darker);
+  }
+  &:visited {
+    color: var(--color-info-darker);
+  }
+}
+
+a.link--accent {
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent-darker);
+  }
+  &:visited {
+    color: var(--color-accent-darker);
+  }
+}
+
+a.link--secondary {
+  color: var(--color-secondary);
+
+  &:hover {
+    color: var(--color-secondary-darker);
+  }
+  &:visited {
+    color: var(--color-secondary-darker);
+  }
+}

@@ -1,0 +1,24 @@
+html {
+  font-size: var(--fs-master);
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fw-normal);
+  font-style: normal;
+  background-color: var(--color-bg-primary);
+  color: var(--color-txt-primary);
+
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 100dvw;
+}
+
+img.responsive {
+  max-width: 100%;
+  image-rendering: smooth;
+  height: auto;
+}
