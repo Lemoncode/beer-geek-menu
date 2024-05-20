@@ -4,6 +4,7 @@
 
 @mixin lightText() {
   font-weight: var(--fw-light);
+  background-color: aqua;
 }
 
 @mixin button(
@@ -30,5 +31,45 @@
 
   &:active {
     transform: translateY(0.2rem);
+  }
+}
+
+@mixin supports($feature, $value) {
+  @supports (#{$feature}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin pseudo($width, $height) {
+  content: '';
+  position: absolute;
+  width: $width;
+  height: $height;
+  @content;
+}
+
+// Maybe this is not necesary, can change brakepoints values
+$breakpoints: (
+  movil: 320px,
+  tablet: 768px,
+  laptop: 1020px,
+  desktop: 1440px,
+);
+
+@mixin responsive($key) {
+  @if map-has-key($breakpoints, $key) {
+    @media screen and (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $key) {
+      @content;
+    }
   }
 }

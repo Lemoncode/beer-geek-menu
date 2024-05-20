@@ -1,22 +1,22 @@
 import React from 'react';
+
+import '@fontsource-variable/oswald';
 import '#styles/default-global-theme/default-global.scss';
+import { Metadata } from 'next';
 
 interface Props {
   children: React.ReactNode;
 }
 
+export const metadata: Metadata = {
+  title: 'Public Portal: Design Sistem',
+  icons: ['/favicon.svg'],
+};
+
 const RootLayout = (props: Props) => {
   const { children } = props;
   return (
     <html lang="es">
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-        rel="stylesheet"
-      ></link>
-
-      <title>Public Portal: Beer Geek Menu</title>
       <body>{children}</body>
     </html>
   );
