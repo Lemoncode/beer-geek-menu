@@ -1,9 +1,11 @@
-$primary: green;
+@use '#styles/default-global-theme/mixins/mixins' as *;
 
-h1.custom {
-  color: $primary;
+.custom {
+  color: green;
   font-size: 3rem;
+  @include lightText();
 }
+
 .nav__title {
   display: flex;
   align-items: center;
@@ -28,6 +30,7 @@ h1.custom {
 .example_block {
   padding: var(--space-lg) var(--space-md);
 }
+
 .grid_example_block {
   padding: var(--space-lg) 0;
 }

@@ -21,6 +21,8 @@
     ]
   },
   "dependencies": {
+    "@fontsource-variable/oswald": "^5.0.20",
+    "@fontsource/roboto": "^5.0.13",
     "next": "^14.2.3"
   },
   "devDependencies": {

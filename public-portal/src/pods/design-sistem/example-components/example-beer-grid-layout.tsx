@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles.module.scss';
 
-export function ExampleBeerGridLayout({ temporals }) {
+export function ExampleBeerGridLayout() {
   return (
     <div className={styles.grid_example_block}>
       <p className="txt-title txt-title--bold mb-md mx-md">Beer catalog grid layout</p>
@@ -19,11 +19,6 @@ export function ExampleBeerGridLayout({ temporals }) {
             et sunt omnis inventore.
           </p>
         </li>
-        {temporals.map(temporal => (
-          <li className="grid-item" key={temporal.id}>
-            {temporal.name}
-          </li>
-        ))}
       </ul>
     </div>
   );
