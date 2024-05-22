@@ -38,6 +38,13 @@ button,
   }
 }
 
+.btn-light {
+  @include button(var(--color-bg-primary), var(--color-txt-secondary));
+  &:hover {
+    background-color: var(--color-secondary-lighter);
+  }
+}
+
 a,
 a.link--info {
   transition: all ease 250ms;

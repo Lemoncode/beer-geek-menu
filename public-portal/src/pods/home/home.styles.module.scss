@@ -1,0 +1,7 @@
+$background-img: url('/home-hero-img.webp');
+
+.home_background {
+  background-image: $background-img;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}

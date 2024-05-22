@@ -125,6 +125,11 @@ $spaces: (
   background-color: var(--color-bg-contrast);
 }
 
+.bg-contrast-darker {
+  color: var(--color-txt-contrast);
+  background-color: var(--color-bg-contrast-darker);
+}
+
 .bg-primary-lighter {
   color: var(--color-txt-primary);
   background-color: var(--color-bg-primary-lighter);
