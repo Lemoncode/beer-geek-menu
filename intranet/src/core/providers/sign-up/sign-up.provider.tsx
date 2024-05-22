@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { SignUpContext } from './sign-up.context';
-import { SignUpModel, createInitialSignUp } from './sign-up.model';
-import { Restaurant, Beer } from '#core/model';
+import { SignUpModel, createInitialSignUp, Restaurant, Beer } from './sign-up.model';
 
 interface Props {
   children: React.ReactNode;
@@ -23,8 +22,8 @@ export const SignUpProvider: React.FC<Props> = props => {
     setSignUpData({ ...signUpData, email });
   };
 
-  const setRestaurants = (restaurants: Restaurant[]) => {
-    setSignUpData({ ...signUpData, restaurants });
+  const setRestaurants = (restaurant: Restaurant) => {
+    setSignUpData({ ...signUpData, restaurant });
   };
 
   const setBeers = (beers: Beer[]) => {
