@@ -9,12 +9,15 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { AppRouter } from '#core/router';
 import { mainTheme } from '#core/theme';
+import { SignUpProvider } from '#core/providers/';
 
 export const App = () => {
   return (
-    <ThemeProvider theme={mainTheme}>
-      <CssBaseline />
-      <AppRouter />
-    </ThemeProvider>
+    <SignUpProvider>
+      <ThemeProvider theme={mainTheme}>
+        <CssBaseline />
+        <AppRouter />
+      </ThemeProvider>
+    </SignUpProvider>
   );
 };
