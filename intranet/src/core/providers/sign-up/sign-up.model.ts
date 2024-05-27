@@ -1,16 +1,10 @@
+import { Beer } from '#core/model';
+
 export interface Restaurant {
   name: string;
   address: string;
   city: string;
   phoneNumber: string;
-}
-
-export interface Beer {
-  id: string;
-  name: string;
-  alcohol: number;
-  volume: number;
-  photoUrl: string;
 }
 
 export interface SignUpModel {
