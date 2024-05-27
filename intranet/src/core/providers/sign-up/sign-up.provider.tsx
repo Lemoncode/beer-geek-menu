@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SignUpContext } from './sign-up.context';
-import { SignUpModel, createInitialSignUp, Restaurant, Beer } from './sign-up.model';
+import { SignUpModel, createInitialSignUp, Restaurant } from './sign-up.model';
+import { Beer } from '#core/model';
 
 interface Props {
   children: React.ReactNode;
