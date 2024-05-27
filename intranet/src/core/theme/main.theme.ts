@@ -38,6 +38,10 @@ export const mainTheme = createTheme({
       fontFamily: 'Oswald',
       fontWeight: 600,
     },
+    h5: {
+      fontFamily: 'Oswald',
+      fontWeight: 400,
+    },
   },
   spacing: 8,
   shape: {
