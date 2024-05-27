@@ -1,0 +1,24 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 0 42.5px;
+
+  .content_divider {
+    width: 100%;
+    border-color: var(--color-txt-accent);
+  }
+
+  .content_text {
+    line-height: 20px;
+    text-wrap: balance;
+    width: 90%;
+  }
+
+  .content_buttons {
+    display: flex;
+    gap: 20px;
+  }
+}

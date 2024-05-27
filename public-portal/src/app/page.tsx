@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { TemporalPod } from '#pods';
+import { HomePod } from '#pods';
 
 const RootPage = () => {
-  return <TemporalPod />;
+  return <HomePod />;
 };
 
 export default RootPage;

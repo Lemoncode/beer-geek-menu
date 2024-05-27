@@ -1,0 +1,20 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 150px 42.5px;
+
+  .contact_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 15px, 0px;
+    border-radius: 9px;
+    width: 348px;
+    height: 90px;
+  }
+}
