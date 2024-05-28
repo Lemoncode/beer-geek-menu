@@ -37,5 +37,8 @@
   "dependencies": {
     "@fontsource-variable/oswald": "^5.0.20",
     "@fontsource/roboto": "^5.0.13"
+  },
+  "engines": {
+    "node": ">=18.20.3"
   }
 }
