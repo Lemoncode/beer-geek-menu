@@ -1,17 +1,14 @@
-import { TextField, Typography } from '@mui/material';
 import React from 'react';
+import { TextField, Typography } from '@mui/material';
+import { useSignUpContext } from '#core/providers/index.js';
 
-interface SignUpStepTwoComponentProps {
-  formData: {
-    name: string;
-    address: string;
-    city: string;
-    phoneNumber: string;
+const SignUpStepTwoComponent: React.FC = () => {
+  const { signUpData, setRestaurants } = useSignUpContext();
+
+  const onTextFieldChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRestaurants({ ...signUpData.restaurant, [e.target.id]: e.target.value });
   };
-  onTextFieldChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
-const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formData, onTextFieldChange }) => {
   return (
     <>
       <Typography variant="h5" component="h2">
@@ -23,7 +20,7 @@ const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formDat
       <form>
         <TextField
           onChange={onTextFieldChange}
-          value={formData.name}
+          value={signUpData.restaurant.name}
           fullWidth
           margin="normal"
           id="name"
@@ -34,7 +31,7 @@ const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formDat
         />
         <TextField
           onChange={onTextFieldChange}
-          value={formData.address}
+          value={signUpData.restaurant.address}
           fullWidth
           margin="normal"
           id="address"
@@ -45,7 +42,7 @@ const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formDat
         />
         <TextField
           onChange={onTextFieldChange}
-          value={formData.city}
+          value={signUpData.restaurant.city}
           fullWidth
           margin="normal"
           id="city"
@@ -56,7 +53,7 @@ const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formDat
         />
         <TextField
           onChange={onTextFieldChange}
-          value={formData.phoneNumber}
+          value={signUpData.restaurant.phoneNumber}
           fullWidth
           margin="normal"
           id="phoneNumber"

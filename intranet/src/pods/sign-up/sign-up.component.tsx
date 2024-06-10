@@ -1,31 +1,22 @@
-import { useState } from 'react';
 import { Button, Typography } from '@mui/material';
 
 import SignUpStepTwoComponent from './component/sing-up-step2.component';
 
 import * as classes from './sign-up.styles';
+import { useSignUpContext } from '#core/providers/index.js';
 
 export const SignUpComponent: React.FC = () => {
-  const [formData, setFormdata] = useState({
-    name: '',
-    address: '',
-    city: '',
-    phoneNumber: '',
-  });
-
-  const onTextFieldChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormdata({ ...formData, [e.target.id]: e.target.value });
-  };
+  const { signUpData } = useSignUpContext();
 
   const handleNextClick = () => {
-    console.log(formData);
+    console.log(signUpData.restaurant);
   };
   return (
     <>
       <Typography variant="h4" component="h1" className={classes.title}>
         Crea tu cuenta
         <div className={classes.steps}>
-          <SignUpStepTwoComponent formData={formData} onTextFieldChange={onTextFieldChange} />
+          <SignUpStepTwoComponent />
         </div>
       </Typography>
       <div className={classes.buttons}>
