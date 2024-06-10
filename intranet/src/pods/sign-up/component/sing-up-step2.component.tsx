@@ -1,7 +1,7 @@
 import { TextField, Typography } from '@mui/material';
 import React from 'react';
 
-interface SingInComponentProps {
+interface SignUpStepTwoComponentProps {
   formData: {
     name: string;
     address: string;
@@ -11,7 +11,7 @@ interface SingInComponentProps {
   onTextFieldChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SignUpStepTwoComponent: React.FC<SingInComponentProps> = ({ formData, onTextFieldChange }) => {
+const SignUpStepTwoComponent: React.FC<SignUpStepTwoComponentProps> = ({ formData, onTextFieldChange }) => {
   return (
     <>
       <Typography variant="h5" component="h2">
@@ -59,7 +59,7 @@ const SignUpStepTwoComponent: React.FC<SingInComponentProps> = ({ formData, onTe
           value={formData.phoneNumber}
           fullWidth
           margin="normal"
-          id="phone"
+          id="phoneNumber"
           label="Teléfono contacto"
           placeholder="Teléfono contacto"
           InputLabelProps={{ shrink: true }}
